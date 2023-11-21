@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <title>نموذج إدخال المعلومات</title>
+</head>
+
+<body>
+    <form method="post" action="process.php">
+        <label for="product">اسم المنتج:</label>
+        <input type="text" id="product" name="product" required><br><br>
+
+        <label for="price">السعر:</label>
+        <input type="text" id="price" name="price" oninput="convertToArabicNumber()" required><br><br>
+
+        <label for="quantity">الكمية:</label>
+        <input type="text" id="quantity" name="quantity" oninput="convertToArabicNumber()" required><br><br>
+
+        <label for="phone">رقم الهاتف:</label>
+        <input type="text" id="phone" name="phone" oninput="convertToArabicNumber()" required><br><br>
+
+        <label for="address">العنوان:</label>
+        <textarea id="address" name="address" required></textarea><br><br>
+
+        <input type="button" value="طباعة" onclick="printForm()" class="btn">
+    </form>
+</body>
+<script src="./scrip.js"></script>
+
+</html>
